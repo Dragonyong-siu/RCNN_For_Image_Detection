@@ -7,3 +7,9 @@ Train_data = torchvision.datasets.VOCDetection(root = './data',
                                   transform = None,
                                   target_transform = None,
                                   transforms = None)
+
+# Minimizing data
+train_data = []
+for i in range(0, 5000, 25):
+  train_data.append(Train_data[i])
+Train_data = train_data
